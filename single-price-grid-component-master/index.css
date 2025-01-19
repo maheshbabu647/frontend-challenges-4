@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+
+    --p-clr : hsl(71, 73%, 54%);
+    --s-clr : hsl(179, 62%, 43%);
+
+    --d-clr-lg : hsl(204, 43%, 93%);
+    --d-clr-gb : hsl(218, 22%, 67%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'karla';
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/*utility classes*/
+
+/* font sizes */
+.f-s0{
+    font-size: 1.6em;
+}
+.f-s1{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.f-s2{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.f-s3{
+    font-size: 1em;
+    font-weight: 600;
+}
+.f-s4{
+    font-size: 0.8em;
+}
+/* font colors */
+.f-cp{
+    color: var(--p-clr);
+}
+.f-cs{
+    color: var(--s-clr);
+}
+.f-cw{
+    color: whitesmoke;
+}
+.f-clg{
+    color: var(--d-clr-gb);
+}
+.f-clw{
+    color: rgb(218, 218, 218);
+}
+
+/* layout */
+.sub-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 85%;
+    border-radius: 7px;
+    box-shadow: 2px 2px 8px grey;
+}
+
+.sub-card__sec{
+    padding: 1.3em 1.5em;
+}
+
+p{
+    margin: 0.6em 0;
+    line-height: 1.5em;
+}
+
+/* styling */
+body{
+    background-color: var(--d-clr-lg);
+}
+
+.sub-card__desc{
+    background-color: white;
+    border-radius: 7px 7px 0 0;
+}
+
+.sub-card__pricing{
+    background-color: var(--s-clr);
+}
+
+.sub-card__whyus{
+    background-color: hsl(179, 55%, 52%);
+    padding-right: 4.5em;
+    border-radius: 0 0 7px 7px;
+}
+
+button{
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 5px ;
+    border: none;
+    background-color: var(--p-clr);
+    color: rgb(237, 253, 255);
+    font-weight: 520;
+    box-shadow: 1px 2px 5px 2px rgb(126, 126, 126);
+}
+
+span{
+    font-size: 0.6em;
+    font-weight: 400;
+    color: rgb(218, 218, 218);
+    vertical-align: top;
+}
+
+/* responsiveness */
+@media (min-width : 425px){
+    .sub-card{
+        width: 375px;
+    }
+}
+
+@media (min-width : 768px) {
+    body{
+        font-size: 16px;
+    }
+    .sub-card{
+        display: grid;
+        grid-template-rows: 0.5fr 1.1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 750px;
+    }
+    .sub-card__desc{
+        grid-column: span 2;
+        padding-right: 5em;
+    }
+    .sub-card__pricing{
+        border-radius: 0 0 0 7px;
+    }
+    .sub-card__whyus{
+        border-radius: 0 0 7px 0;
+    }
+}
+
